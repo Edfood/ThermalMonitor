@@ -6,5 +6,11 @@
     <true/>
     <key>com.apple.security.files.user-selected.read-only</key>
     <true/>
+    <key>com.apple.security.temporary-exception.sbpl</key>
+    <array>
+        <string>(allow iokit-open)</string>
+        <string>(allow iokit-set-properties (iokit-property "ConsoleUID"))</string>
+        <string>(allow mach-lookup (global-name "com.apple.AssetCacheLocatorService"))</string>
+    </array>
 </dict>
 </plist>
