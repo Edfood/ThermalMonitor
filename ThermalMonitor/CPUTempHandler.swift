@@ -21,15 +21,19 @@
 //  along with Foobar.  If not, see <http://www.gnu.org/licenses/>.
 //
 
-#import <Foundation/Foundation.h>
-#ifndef SMCObjC_h
-#define SMCObjC_h
-
-@interface SMCObjC : NSObject
-
-+(double)calculateTemp;
-
-@end
 
 
-#endif /* SMCObjC_h */
+
+import Foundation
+
+struct CPUTempHandler {
+    var cpuTemperature: Double
+    
+    init () {
+        cpuTemperature = 0
+    }
+    
+    mutating func updateCPUTemp (){
+        cpuTemperature = SMCObjC.calculateTemp()
+    }
+}

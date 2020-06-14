@@ -11,7 +11,24 @@
 		003747C1248A2C170005CEC0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 003747C0248A2C170005CEC0 /* ViewController.swift */; };
 		003747C3248A2C180005CEC0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 003747C2248A2C180005CEC0 /* Assets.xcassets */; };
 		003747C6248A2C180005CEC0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 003747C4248A2C180005CEC0 /* Main.storyboard */; };
+		003747D7248AB42D0005CEC0 /* BackgroundTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 003747D6248AB42D0005CEC0 /* BackgroundTimer.swift */; };
+		003747EE248AB9540005CEC0 /* smc.c in Sources */ = {isa = PBXBuildFile; fileRef = 003747ED248AB9540005CEC0 /* smc.c */; };
+		003747F2248ABC810005CEC0 /* SMCObjC.m in Sources */ = {isa = PBXBuildFile; fileRef = 003747F1248ABC810005CEC0 /* SMCObjC.m */; };
+		00EB72BD249687E200B9581B /* CPUTempHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00EB72BC249687E200B9581B /* CPUTempHandler.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		003747EB248AB7600005CEC0 /* Embed XPC Services */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/XPCServices";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			name = "Embed XPC Services";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		003747BB248A2C170005CEC0 /* ThermalMonitor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ThermalMonitor.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -21,6 +38,13 @@
 		003747C5248A2C180005CEC0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		003747C7248A2C180005CEC0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		003747C8248A2C180005CEC0 /* ThermalMonitor.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ThermalMonitor.entitlements; sourceTree = "<group>"; };
+		003747D6248AB42D0005CEC0 /* BackgroundTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundTimer.swift; sourceTree = "<group>"; };
+		003747EC248AB9540005CEC0 /* smc.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = smc.h; sourceTree = "<group>"; };
+		003747ED248AB9540005CEC0 /* smc.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = smc.c; sourceTree = "<group>"; };
+		003747F1248ABC810005CEC0 /* SMCObjC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SMCObjC.m; sourceTree = "<group>"; };
+		003747F4248ABCD00005CEC0 /* SMCObjC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SMCObjC.h; sourceTree = "<group>"; };
+		003747F9248AC1580005CEC0 /* ThermalMonitor-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ThermalMonitor-Bridging-Header.h"; sourceTree = "<group>"; };
+		00EB72BC249687E200B9581B /* CPUTempHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CPUTempHandler.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,14 +77,29 @@
 		003747BD248A2C170005CEC0 /* ThermalMonitor */ = {
 			isa = PBXGroup;
 			children = (
+				00EB72BB24967CF900B9581B /* SMC */,
 				003747BE248A2C170005CEC0 /* AppDelegate.swift */,
 				003747C0248A2C170005CEC0 /* ViewController.swift */,
 				003747C2248A2C180005CEC0 /* Assets.xcassets */,
 				003747C4248A2C180005CEC0 /* Main.storyboard */,
 				003747C7248A2C180005CEC0 /* Info.plist */,
+				00EB72BC249687E200B9581B /* CPUTempHandler.swift */,
 				003747C8248A2C180005CEC0 /* ThermalMonitor.entitlements */,
+				003747D6248AB42D0005CEC0 /* BackgroundTimer.swift */,
+				003747F4248ABCD00005CEC0 /* SMCObjC.h */,
+				003747F1248ABC810005CEC0 /* SMCObjC.m */,
+				003747F9248AC1580005CEC0 /* ThermalMonitor-Bridging-Header.h */,
 			);
 			path = ThermalMonitor;
+			sourceTree = "<group>";
+		};
+		00EB72BB24967CF900B9581B /* SMC */ = {
+			isa = PBXGroup;
+			children = (
+				003747EC248AB9540005CEC0 /* smc.h */,
+				003747ED248AB9540005CEC0 /* smc.c */,
+			);
+			path = SMC;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -73,6 +112,7 @@
 				003747B7248A2C170005CEC0 /* Sources */,
 				003747B8248A2C170005CEC0 /* Frameworks */,
 				003747B9248A2C170005CEC0 /* Resources */,
+				003747EB248AB7600005CEC0 /* Embed XPC Services */,
 			);
 			buildRules = (
 			);
@@ -95,6 +135,7 @@
 				TargetAttributes = {
 					003747BA248A2C170005CEC0 = {
 						CreatedOnToolsVersion = 11.5;
+						LastSwiftMigration = 1150;
 					};
 				};
 			};
@@ -133,7 +174,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				003747F2248ABC810005CEC0 /* SMCObjC.m in Sources */,
 				003747C1248A2C170005CEC0 /* ViewController.swift in Sources */,
+				003747D7248AB42D0005CEC0 /* BackgroundTimer.swift in Sources */,
+				00EB72BD249687E200B9581B /* CPUTempHandler.swift in Sources */,
+				003747EE248AB9540005CEC0 /* smc.c in Sources */,
 				003747BF248A2C170005CEC0 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -269,9 +314,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = ThermalMonitor/ThermalMonitor.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 2FABX2N3U4;
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = ThermalMonitor/Info.plist;
@@ -281,6 +328,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.gmail.kfed542.ThermalMonitor;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "$SRCROOT/$PROJECT/$PROJECT-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
@@ -289,9 +337,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = ThermalMonitor/ThermalMonitor.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 2FABX2N3U4;
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = ThermalMonitor/Info.plist;
@@ -301,6 +351,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.gmail.kfed542.ThermalMonitor;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "$SRCROOT/$PROJECT/$PROJECT-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
