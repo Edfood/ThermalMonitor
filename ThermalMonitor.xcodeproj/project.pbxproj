@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		003747BF248A2C170005CEC0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 003747BE248A2C170005CEC0 /* AppDelegate.swift */; };
-		003747C1248A2C170005CEC0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 003747C0248A2C170005CEC0 /* ViewController.swift */; };
 		003747C3248A2C180005CEC0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 003747C2248A2C180005CEC0 /* Assets.xcassets */; };
 		003747C6248A2C180005CEC0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 003747C4248A2C180005CEC0 /* Main.storyboard */; };
 		003747D7248AB42D0005CEC0 /* BackgroundTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 003747D6248AB42D0005CEC0 /* BackgroundTimer.swift */; };
@@ -33,7 +32,6 @@
 /* Begin PBXFileReference section */
 		003747BB248A2C170005CEC0 /* ThermalMonitor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ThermalMonitor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		003747BE248A2C170005CEC0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		003747C0248A2C170005CEC0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		003747C2248A2C180005CEC0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		003747C5248A2C180005CEC0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		003747C7248A2C180005CEC0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -79,7 +77,6 @@
 			children = (
 				00EB72BB24967CF900B9581B /* SMC */,
 				003747BE248A2C170005CEC0 /* AppDelegate.swift */,
-				003747C0248A2C170005CEC0 /* ViewController.swift */,
 				003747C2248A2C180005CEC0 /* Assets.xcassets */,
 				003747C4248A2C180005CEC0 /* Main.storyboard */,
 				003747C7248A2C180005CEC0 /* Info.plist */,
@@ -175,7 +172,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				003747F2248ABC810005CEC0 /* SMCObjC.m in Sources */,
-				003747C1248A2C170005CEC0 /* ViewController.swift in Sources */,
 				003747D7248AB42D0005CEC0 /* BackgroundTimer.swift in Sources */,
 				00EB72BD249687E200B9581B /* CPUTempHandler.swift in Sources */,
 				003747EE248AB9540005CEC0 /* smc.c in Sources */,

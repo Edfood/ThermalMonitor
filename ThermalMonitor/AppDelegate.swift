@@ -29,24 +29,25 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     
     var statusBarItem: NSStatusItem!
     let fontName = "monospacedDigitSystemFont"
-    let defaultTitle = "CPU: 0.00℃"
+    let temperatureTitle = "CPU: 0.00℃"
+    let quitTitle = "Quit ThermalMonitor"
     
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         
         let statusBar = NSStatusBar.system
         statusBarItem = statusBar.statusItem(withLength: -1)
-        statusBarItem.button?.title = defaultTitle
+        statusBarItem.button?.title = temperatureTitle
         statusBarItem.button?.font = NSFont(name: fontName, size: 10)
 
         let statusBarMenu = NSMenu(title: "ThermalMonitor Status Bar Menu")
         statusBarItem.menu = statusBarMenu
 
         statusBarMenu.addItem(
-            withTitle: "Quit ThermalMonitor",
+            withTitle: quitTitle,
             action: #selector(AppDelegate.quit(_:)),
             keyEquivalent: "")
             
-        let _ = BackgroundTimer()  // update CPU temperature of status bar
+        let _ = BackgroundTimer()  // update CPU temperature in status bar
             
         }
 
