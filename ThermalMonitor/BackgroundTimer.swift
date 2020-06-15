@@ -40,7 +40,7 @@ class BackgroundTimer {
         Timer.scheduledTimer(withTimeInterval: 2.0, repeats: true, block: { (timer) in
             self.handler.updateCPUTemp()
             let temperature = self.handler.cpuTemperature
-            let strTemp = String(format: "%.2f", temperature)
+            let strTemp = String(format: "%.1f", temperature)
             self.appDelegate.statusBarItem.button?.title = "CPU: \(strTemp)℃"
             
             print("\(temperature)")

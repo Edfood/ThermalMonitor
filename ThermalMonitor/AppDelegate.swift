@@ -28,7 +28,6 @@ import Cocoa
 class AppDelegate: NSObject, NSApplicationDelegate {
     
     var statusBarItem: NSStatusItem!
-    let fontName = "monospacedDigitSystemFont"
     let temperatureTitle = "CPU: 0.00℃"
     let quitTitle = "Quit ThermalMonitor"
     
@@ -37,7 +36,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         let statusBar = NSStatusBar.system
         statusBarItem = statusBar.statusItem(withLength: -1)
         statusBarItem.button?.title = temperatureTitle
-        statusBarItem.button?.font = NSFont(name: fontName, size: 10)
+        statusBarItem.button?.font = NSFont.monospacedDigitSystemFont(ofSize: -1, weight: .medium)
+        //monospacedDigitSystemFont
 
         let statusBarMenu = NSMenu(title: "ThermalMonitor Status Bar Menu")
         statusBarItem.menu = statusBarMenu
