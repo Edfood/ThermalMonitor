@@ -32,20 +32,23 @@ class BackgroundTimer {
     var appDelegate: AppDelegate {
         return NSApplication.shared.delegate as! AppDelegate
     }
+    var timer: Timer?
+    var timeInterval: Double
     
     init() {
-        
         handler = CPUTempHandler()
+        timeInterval = 2.0
         
-        Timer.scheduledTimer(withTimeInterval: 2.0, repeats: true, block: { (timer) in
-            self.handler.updateCPUTemp()
-            let temperature = self.handler.cpuTemperature
-            let strTemp = String(format: "%.1f", temperature)
-            self.appDelegate.statusBarItem.button?.title = "CPU: \(strTemp)℃"
-            
-            print("\(temperature)")
-                
-        })
+        timer = Timer.scheduledTimer(timeInterval: timeInterval, target: self, selector: #selector(updateTempDisplay), userInfo: nil, repeats: true)
+        timer?.tolerance = 0.5
+    }
+    
+    @objc func updateTempDisplay() {
+        self.handler.updateCPUTemp()
+        let temperature = self.handler.cpuTemperature
+        let strTemp = String(format: "%.1f", temperature)
+        self.appDelegate.statusBarItem.button?.title = "CPU: \(strTemp)℃"
         
+        print("\(temperature)")
     }
 }
