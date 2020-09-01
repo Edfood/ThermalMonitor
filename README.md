@@ -1,7 +1,7 @@
 # ThermalMonitor
 A Simple Mac OS X application for displaying the CPU temperature in status bar.
 
-This app display the temperature every 2 seconds.
+The temperature is updated every two seconds.
 
 ## Screenshots
 
